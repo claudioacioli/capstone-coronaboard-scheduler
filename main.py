@@ -1,3 +1,4 @@
+import os
 import schedule
 import time
 import requests
@@ -6,11 +7,11 @@ import psycopg2
 
 def save_countries(countries):
     conn = psycopg2.connect(
-            host="127.0.0.1",
-            port=5432,
-            user="coronaboard",
-            password="123456",
-            database="coronaboard")
+            host=os.getenv("host", "127.0.0.1"),
+            port=os.getenv("port", 5432),
+            user=os.getenv("user", "coronaboard"),
+            password=os.getenv("password", "123456"),
+            database=os.getenv("database", "coronaboard"))
     cursor = conn.cursor()
     for country in countries:
         try:
