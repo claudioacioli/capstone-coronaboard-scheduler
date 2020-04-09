@@ -4,7 +4,7 @@ This is part of the another projects for capstone Udacity CloudDeveloper
 
 ## Scheduler
 
-This objective for this scheduler is get data from api every 10 minutes about Corona virus and then put on Database!
+The objective for this scheduler is get data from api every 10 minutes about Corona virus and then put on Database!
 
 ## Install
 
